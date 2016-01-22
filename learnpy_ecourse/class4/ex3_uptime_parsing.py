@@ -57,10 +57,13 @@ uptime_dict2 = {}
 for uptime in (uptime1, uptime2, uptime3, uptime4):
 
     uptime_fields = uptime.split(',')
+    #print uptime_fields
 
     # Extract the hostname from uptime_fields
     (hostname, time_field1) = uptime_fields[0].split(' uptime is ')
     uptime_fields[0] = time_field1
+
+    #print uptime_fields
 
     if DEBUG:
         print hostname
@@ -133,4 +136,3 @@ pprint.pprint(uptime_dict)
 print "\nMethod2:"
 pprint.pprint(uptime_dict2)
 print
-
